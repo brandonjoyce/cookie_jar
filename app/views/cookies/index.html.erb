@@ -1,0 +1,9 @@
+<p>Here's all the cookies I can see server-side:</p>
+<ul>
+  <% cookies.each do |cookie| %>
+    <li>
+      <strong><%= cookie[0] %>:</strong> <%= cookie[1] %> <%= link_to 'Delete', cooky_path(id: cookie[0]), method: :delete, data: { confirm: 'Are you sure' } %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Set a new cookie from the server.', new_cooky_path %>

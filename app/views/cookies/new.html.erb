@@ -1,0 +1,15 @@
+<p>Tell me what kind of cookie to set</p>
+<%= form_tag cookies_path, method: :post do %>
+  <%= label_tag(:key, 'Key') %>
+  <%= text_field_tag(:key) %>
+  <%= label_tag(:value, 'Value') %>
+  <%= text_field_tag(:value) %>
+  <%= label_tag(:domain, 'Domain') %>
+  <%= text_field_tag(:Domain) %>
+  <%= label_tag(:secure, 'Secure') %>
+  <%= check_box_tag(:secure) %>
+  <%= label_tag(:http_only, 'Http Only') %>
+  <%= check_box_tag(:http_only) %>
+
+  <%= submit_tag('Submit') %>
+<% end %>
